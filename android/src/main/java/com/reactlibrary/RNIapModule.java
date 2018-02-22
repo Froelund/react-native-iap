@@ -429,7 +429,7 @@ public class RNIapModule extends ReactContextBaseJavaModule {
         if (buyItemCB != null && purchases.size() >= 1) {
           try {
             buyItemCB.invoke(null, purchases.get(0).getOriginalJson().toString());
-          } catch (JSONException e) {
+          } catch (Exception e) {
             buyItemCB.invoke(e, null);
           } finally {
             buyItemCB = null;
